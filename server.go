@@ -345,7 +345,7 @@ func (s *CaptchaSolver) generateMouseTrack(distance int) string {
     track = append(track, move{X: startX, Y: startY, T: int(startTime)})
 
     totalDuration := int64(rand.Intn(400) + 300) // 总耗时在300-700ms之间
-    for i := 1; i <= distance; i += rand.Intn(10) + 5 {
+    for i := 1; i <= distance; i += rand.Intn(5) + 5 {
         if i > distance {
             break
         }
